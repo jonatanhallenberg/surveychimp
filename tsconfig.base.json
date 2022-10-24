@@ -14,7 +14,10 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@surveychimp/surveychimp-lib": ["libs/surveychimp-lib/src/index.ts"],
+      "@surveychimp/surveychimp-ui": ["libs/surveychimp-ui/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
