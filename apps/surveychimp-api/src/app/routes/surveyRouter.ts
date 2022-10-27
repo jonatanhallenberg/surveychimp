@@ -46,7 +46,7 @@ router.get(
 router.post('/survey', async (req, res) => {
     const survey = await addSurvey({
         recipient: {
-            name: "Jonatan",
+            name: "Ashod",
             mobileNumber: "+46 72 300 36 42"
         }
     });
@@ -55,7 +55,7 @@ router.post('/survey', async (req, res) => {
 
 router.patch('/survey/:surveyId', async (req, res) => {
     const survey = await addResponseToSurvey("6358372abe8f15a9145ce5a7", {
-        rating: 7,
+        rating: 3,
         comment: "hello guys!"
     });
     res.json(survey);

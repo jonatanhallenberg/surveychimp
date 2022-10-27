@@ -5,7 +5,7 @@ Content-Type: application/json
 
 {
     "recipient": {
-        "name": "Jonatan",
+        "name": "Nabhan",
         "mobileNumber": "+46 72 300 36 42"
     }
 }
