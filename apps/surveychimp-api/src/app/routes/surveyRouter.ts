@@ -26,8 +26,8 @@ router.get(
     });
 
 router.post('/survey',
-    body("recipient.name").isString().isLength({ "min": 3 }),
-    body("recipient.mobileNumber").isMobilePhone("sv-SE"),
+    body("recipient.name").isString().isLength({ "min": 3 }).withMessage("Du måste skriva minst 3 tecken"),
+    body("recipient.mobileNumber").isMobilePhone("sv-SE").withMessage("Skriv in ett mobilnummer, t.ex. 070 123 12 12"),
     async (req, res) => {
 
         //validation
