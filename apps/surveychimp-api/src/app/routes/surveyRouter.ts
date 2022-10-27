@@ -25,15 +25,20 @@ router.get(
 
     });
 
-router.post('/survey', async (req, res) => {
-    const survey = await addSurvey({
-        recipient: {
-            name: "Jonatan",
-            mobileNumber: "+46 72 300 36 42"
+router.post('/survey',
+    body("recipient.name").isString().isLength({ "min": 3 }),
+    body("recipient.mobileNumber").isMobilePhone("sv-SE"),
+    async (req, res) => {
+
+        //validation
+        const errors = validationResult(req);
+        if (!errors.isEmpty()) {
+            return res.status(400).json({ errors: errors.array() });
         }
+
+        const survey = await addSurvey(req.body);
+        res.json(survey);
     });
-    res.json(survey);
-});
 
 router.patch('/survey/:surveyId', async (req, res) => {
     const survey = await addResponseToSurvey("6354fa3e707d56d9524fd2f3", {
