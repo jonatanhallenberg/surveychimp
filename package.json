@@ -5,6 +5,7 @@
   "scripts": {
     "start": "nx serve",
     "start:surveychimp-api": "nx serve surveychimp-api",
+    "start:surveychimp-spa": "nx serve surveychimp-survey-spa",
     "build": "nx build",
     "test": "nx test"
   },
