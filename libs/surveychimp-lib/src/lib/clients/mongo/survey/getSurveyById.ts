@@ -8,3 +8,12 @@ export const getSurveyById = async (surveyId: string) => {
 
     return survey;
 }
+
+export const getSurvey = async () => {
+    const survey = SurveyModel.find();
+    if (!survey) {
+        throw 404;
+    }
+
+    return survey;
+}

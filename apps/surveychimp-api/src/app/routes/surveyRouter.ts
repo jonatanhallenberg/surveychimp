@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { addSurvey, addResponseToSurvey, getSurveyById } from '@surveychimp/surveychimp-lib';
+import { addSurvey, addResponseToSurvey, getSurveyById, getSurvey } from '@surveychimp/surveychimp-lib';
 import { body, param, validationResult } from 'express-validator';
 import { nextTick } from 'process';
 
@@ -24,6 +24,24 @@ router.get(
         }
 
     });
+router.get(
+    '/survey',
+    async (req, res, next) => {
+        try {
+            //validation
+            const errors = validationResult(req);
+            if (!errors.isEmpty()) {
+                return res.status(400).json({ errors: errors.array() });
+            }
+
+            //do stuff if valid input data
+            const survey = await getSurvey();
+            res.json(survey);
+        } catch (err) {
+            next(err);
+        }
+
+    });
 
 router.post('/survey', async (req, res) => {
     const survey = await addSurvey({
@@ -36,8 +54,9 @@ router.post('/survey', async (req, res) => {
 });
 
 router.patch('/survey/:surveyId', async (req, res) => {
-    const survey = await addResponseToSurvey("6354fa3e707d56d9524fd2f3", {
-        rating: 3
+    const survey = await addResponseToSurvey("6358372abe8f15a9145ce5a7", {
+        rating: 7,
+        comment: "hello guys!"
     });
     res.json(survey);
 });
