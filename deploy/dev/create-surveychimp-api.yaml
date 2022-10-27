@@ -6,8 +6,7 @@ services:
   envs:
   - key: MONGO_DATABASE_URI
     scope: RUN_AND_BUILD_TIME
-    type: SECRET
-    value: EV[1:BwCyVIi/hAxm0DAEYR0r/7ghnYhOcfl9:lm1z/0A4OYO67PqH4zK7sK7rt7ihbrdR+mizpk54Qc3K4W8EsdMTF/gA4G6lf0NGlnZUu0RqgRmDEJ+DghMm4vhHiSHc+bHNZjTpyRY+PgvUvLOaC6qo0Aw7NxbAfs1fe1M3bPMLjg==]
+    value: mongodb+srv://jonatan:123qweasd@cluster0.otsv5.mongodb.net/?retryWrites=true&w=majority
   github:
     branch: main
     deploy_on_push: true
