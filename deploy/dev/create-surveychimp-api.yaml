@@ -1,0 +1,22 @@
+name: coral-app
+region: ams
+services:
+- build_command: npx nx run surveychimp-api:build:production
+  environment_slug: node-js
+  envs:
+  - key: MONGO_DATABASE_URI
+    scope: RUN_AND_BUILD_TIME
+    type: SECRET
+    value: EV[1:bijxyq+ekko0MjX5tKKckCZPC+wC/l5Y:ov9CrAjwEBpYwIhevorqx4CnjwWT5bQg/CuO+YAjpt6AWv4N+FBhxmoUtFXiUh2pIshsRii//iJpuWqqQS0Yli40VA6itgL4g48TwxVb2Hy6R0MUYCfU/eOsM77D6//D37zUB7Ag9A==]
+  github:
+    branch: main
+    deploy_on_push: true
+    repo: LindaMarko/surveychimp
+  http_port: 3333
+  instance_count: 1
+  instance_size_slug: basic-xxs
+  name: surveychimp
+  routes:
+  - path: /
+  run_command: node ./dist/apps/surveychimp-api/main.js
+  source_dir: /
