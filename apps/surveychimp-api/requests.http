@@ -1,4 +1,4 @@
-@baseUrl=http://localhost:3333
+@baseUrl=https://surveychimp-test-rhsvk.ondigitalocean.app
 
 POST {{baseUrl}}/survey
 Content-Type: application/json
@@ -12,7 +12,7 @@ Content-Type: application/json
 
 ###
 
-GET {{baseUrl}}/survey/635ad5b2cf3d50daaa87c966
+GET {{baseUrl}}/survey/635becbbfd734262f1059b20
 
 ###
 
