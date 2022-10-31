@@ -4,6 +4,7 @@ databases:
   name: surveychimp-db
   production: true
   version: "5"
+  db_name: prod
 name: surveychimp-dev
 region: ams
 services:
