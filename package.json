@@ -4,7 +4,11 @@
   "license": "MIT",
   "scripts": {
     "start": "nx serve",
+    "start:survey-spa": "nx serve surveychimp-survey-spa",
+    "start:api": "nx serve surveychimp-api",
     "build": "nx build",
+    "build:survey-spa": "nx build surveychimp-survey-spa",
+    "build:api": "nx build surveychimp-survey-spa",
     "test": "nx test"
   },
   "private": true,
