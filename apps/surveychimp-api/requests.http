@@ -1,18 +1,27 @@
+<<<<<<< HEAD
 @baseUrl=https://surveychimp-test-rhsvk.ondigitalocean.app
+=======
+@baseUrl=https://dev.surveychimp-groupseven.me
+
+>>>>>>> e20a4fb (Add new domain)
 
 POST {{baseUrl}}/survey
 Content-Type: application/json
 
 {
     "recipient": {
-        "name": "Jonatan",
+        "name": "Linda",
         "mobileNumber": "070 123 12 12"
     }
 }
 
 ###
 
+<<<<<<< HEAD
 GET {{baseUrl}}/survey/635becbbfd734262f1059b20
+=======
+GET {{baseUrl}}/survey/6360d50dea3d8883168ba85f
+>>>>>>> e20a4fb (Add new domain)
 
 ###
 
