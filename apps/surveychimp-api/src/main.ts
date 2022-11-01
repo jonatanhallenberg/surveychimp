@@ -10,7 +10,6 @@ import surveyRouter from './app/routes/surveyRouter';
 
 const app = express();
 
-
 //Required to parse json body
 app.use(express.json());
 
