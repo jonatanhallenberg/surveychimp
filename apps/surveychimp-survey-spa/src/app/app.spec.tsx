@@ -1,5 +1,4 @@
 import { render } from '@testing-library/react';
-
 import { BrowserRouter } from 'react-router-dom';
 
 
@@ -17,6 +16,6 @@ describe('App', () => {
     
     const { getByText } = render(<BrowserRouter><App /></BrowserRouter>);
     
-    expect(getByText(/Welcome surveychimp-survey-spa/gi)).toBeTruthy();
+    expect(getByText(/Här finns inget/gi)).toBeTruthy();
   });
 });

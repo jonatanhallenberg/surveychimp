@@ -17,6 +17,9 @@ export function App() {
     <StyledApp>
       <Routes>
         <Route
+          path="/"
+          element={<p>Här finns inget</p>} />
+        <Route
           path="/survey/:surveyId"
           element={<SurveyPage />}
         />
