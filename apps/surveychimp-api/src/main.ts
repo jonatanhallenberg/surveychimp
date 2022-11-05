@@ -1,7 +1,7 @@
 import { connect } from '@surveychimp/surveychimp-lib';
 import app from './app';
 
-const port = process.env.port || 3333;
+const port = process.env.PORT || 3333;
 
 try {
   connect().then(() => {
