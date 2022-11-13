@@ -7,9 +7,15 @@
     "start:survey-spa": "nx serve surveychimp-survey-spa",
     "start:api": "nx serve surveychimp-api",
     "build": "nx build",
+<<<<<<< HEAD
     "build:survey-spa": "nx build surveychimp-survey-spa",
     "build:api": "nx build surveychimp-survey-spa",
     "test": "nx test"
+=======
+    "test": "nx test",
+    "test:api": "nx run surveychimp-api:test",
+    "test:survey-spa": "nx run surveychimp-survey-spa:test"
+>>>>>>> main
   },
   "private": true,
   "dependencies": {
@@ -23,6 +29,7 @@
     "react-router-dom": "6.4.1",
     "regenerator-runtime": "0.13.7",
     "styled-components": "5.3.5",
+    "supertest": "^6.3.1",
     "tslib": "^2.3.0"
   },
   "devDependencies": {
