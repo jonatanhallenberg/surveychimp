@@ -7,15 +7,11 @@
     "start:survey-spa": "nx serve surveychimp-survey-spa",
     "start:api": "nx serve surveychimp-api",
     "build": "nx build",
-<<<<<<< HEAD
     "build:survey-spa": "nx build surveychimp-survey-spa",
     "build:api": "nx build surveychimp-survey-spa",
-    "test": "nx test"
-=======
     "test": "nx test",
     "test:api": "nx run surveychimp-api:test",
     "test:survey-spa": "nx run surveychimp-survey-spa:test"
->>>>>>> main
   },
   "private": true,
   "dependencies": {
