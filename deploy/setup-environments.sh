@@ -15,5 +15,5 @@ doctl databases db create $CLUSTER_ID dev
 doctl databases db create $CLUSTER_ID prod
 
 #doctl apps create --spec ./surveychimp-app.yaml --format "ID"
-#doctl apps create --spec ./surveychimp-app-with-db.yaml
+doctl apps create --spec ./surveychimp-app-dev.yaml
 

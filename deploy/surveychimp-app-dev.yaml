@@ -1,10 +1,10 @@
 databases:
 - cluster_name: surveychimp-db
+  db_name: dev
   engine: MONGODB
   name: surveychimp-db
   production: true
   version: "5"
-  db_name: prod
 name: surveychimp-dev
 region: ams
 services:
@@ -26,7 +26,7 @@ services:
   instance_size_slug: basic-xxs
   name: surveychimp-api
   routes:
-  - path: /
+  - path: /api
   run_command: node ./dist/apps/surveychimp-api/main.js
   source_dir: /
 static_sites:
@@ -39,5 +39,5 @@ static_sites:
   name: surveychimp-survey-spa
   output_dir: dist/apps/surveychimp-survey-spa
   routes:
-  - path: /surveychimp
+  - path: /
   source_dir: /
