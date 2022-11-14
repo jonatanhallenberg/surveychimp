@@ -1,4 +1,4 @@
-@baseUrl=http://localhost:3333
+@baseUrl=https://surveychimp-dev-b8rug.ondigitalocean.app/api
 
 POST {{baseUrl}}/survey
 Content-Type: application/json

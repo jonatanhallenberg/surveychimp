@@ -18,21 +18,12 @@ router.get(
 
 router.get(
     '/survey/:surveyId',
-    param("surveyId").isMongoId(),
-    async (req, res, next) => {
-        try {
-            //validation
-            const errors = validationResult(req);
-            if (!errors.isEmpty()) {
-                return res.status(400).json({ errors: errors.array() });
-            }
+    async (req, res) => {
 
-            //do stuff if valid input data
-            const survey = await getSurveyById(req.params.surveyId);
-            res.json(survey);
-        } catch (err) {
-            next(err);
-        }
+        //do stuff if valid input data
+        throw "Det här gick dåligt";
+        const survey = await getSurveyById(req.params.surveyId);
+        res.json(survey);
 
     });
 
