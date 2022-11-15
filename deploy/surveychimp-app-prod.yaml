@@ -1,11 +1,15 @@
 databases:
-- cluster_name: surveychimp-db
+- cluster_name: db-mongodb-ams3-09014
   engine: MONGODB
-  name: surveychimp-db
+  name: db-mongodb-ams3-09014
   production: true
   version: "5"
-  db_name: prod
-name: surveychimp-dev
+domains:
+- domain: dev.blinblyat.me
+  type: PRIMARY
+- domain: prod.blinblyat.me
+  type: ALIAS
+name: surveymonkey
 region: ams
 services:
 - build_command: npx nx run surveychimp-api:build:production
@@ -13,31 +17,30 @@ services:
   envs:
   - key: DATABASE_URL
     scope: RUN_TIME
-    value: ${surveychimp-db.DATABASE_URL}
+    value: ${db-mongodb-ams3-09014.DATABASE_URL}
   - key: CA_CERT
     scope: RUN_TIME
-    value: ${surveychimp-db.CA_CERT}
+    value: ${db-mongodb-ams3-09014.CA_CERT}
   github:
     branch: main
-    deploy_on_push: true
-    repo: jonatanhallenberg/surveychimp
+    repo: oskarskold/surveychimp
   http_port: 3333
   instance_count: 1
   instance_size_slug: basic-xxs
-  name: surveychimp-api
+  name: surveychimp
   routes:
-  - path: /
+  - path: /api
   run_command: node ./dist/apps/surveychimp-api/main.js
   source_dir: /
 static_sites:
-- build_command: npx nx run build surveychimp-survey-spa
+- build_command: npm run build:survey-spa
   environment_slug: node-js
   github:
     branch: main
     deploy_on_push: true
-    repo: jonatanhallenberg/surveychimp
-  name: surveychimp-survey-spa
-  output_dir: dist/apps/surveychimp-survey-spa
+    repo: oskarskold/surveychimp
+  name: surveychimp2
+  output_dir: /dist/apps/surveychimp-survey-spa
   routes:
-  - path: /surveychimp
+  - path: /
   source_dir: /

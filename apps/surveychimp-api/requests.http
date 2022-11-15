@@ -1,4 +1,4 @@
-@baseUrl=https://surveymonkey-hmcmf.ondigitalocean.app
+@baseUrl=https://dev.blinblyat.me/api
 
 POST {{baseUrl}}/survey
 Content-Type: application/json
