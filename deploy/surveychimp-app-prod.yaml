@@ -1,10 +1,10 @@
 databases:
 - cluster_name: surveychimp-db
-  db_name: dev
   engine: MONGODB
   name: surveychimp-db
   production: true
   version: "5"
+  db_name: prod
 name: surveychimp-dev
 region: ams
 services:
@@ -18,7 +18,7 @@ services:
     scope: RUN_TIME
     value: ${surveychimp-db.CA_CERT}
   github:
-    branch: dev
+    branch: main
     deploy_on_push: true
     repo: jonatanhallenberg/surveychimp
   http_port: 3333
@@ -26,23 +26,18 @@ services:
   instance_size_slug: basic-xxs
   name: surveychimp-api
   routes:
-  - path: /api
+  - path: /
   run_command: node ./dist/apps/surveychimp-api/main.js
   source_dir: /
 static_sites:
 - build_command: npx nx run build surveychimp-survey-spa
-  catchall_document: index.html
   environment_slug: node-js
-  envs:
-  - key: NX_RATING_STARS_FEATURE
-    scope: BUILD_TIME
-    value: "false"
   github:
-    branch: dev
+    branch: main
     deploy_on_push: true
     repo: jonatanhallenberg/surveychimp
   name: surveychimp-survey-spa
   output_dir: dist/apps/surveychimp-survey-spa
   routes:
-  - path: /
+  - path: /surveychimp
   source_dir: /

@@ -3,10 +3,8 @@ import { useEffect, useState } from 'react';
 import getSurveyById from '../../api/getSurveyById';
 import { ISurvey } from '@surveychimp/surveychimp-lib';
 import ReactStars from 'react-stars'
-import useAnalyticsEventTracker from '../hooks/useAnalyticsEventTracker';
 
 const SurveyPage = () => {
-    const gaEventTracker = useAnalyticsEventTracker('Contact us');
     const { surveyId } = useParams();
     const [survey, setSurvey] = useState<ISurvey>()
 
@@ -26,7 +24,7 @@ const SurveyPage = () => {
         <p>{survey?.recipient.name}</p>
         <ReactStars
             count={5}
-            onChange={() => { gaEventTracker('stars clicked') }}
+            onChange={() => { console.log('change rating') }}
             size={24}
             color2={'#ffd700'} />
     </>)

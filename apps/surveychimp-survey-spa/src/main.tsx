@@ -5,7 +5,7 @@ import * as Sentry from "@sentry/react";
 import { BrowserTracing } from "@sentry/tracing";
 
 import App from './app/app';
-console.log(process.env);
+
 Sentry.init({
     dsn: "https://722f548cbf6d4215ad8c49d543939cda@o4504152294162432.ingest.sentry.io/4504157459316736",
     integrations: [new BrowserTracing()],
