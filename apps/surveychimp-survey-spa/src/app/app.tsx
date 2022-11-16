@@ -30,13 +30,10 @@ export function App() {
     <StyledApp>
       <Routes>
 
-        {process.env.NX_RATING_STARS_FEATURE === "true" ? <Route
+        <Route
           path="/survey/:surveyId"
           element={<SurveyPageWithStars />}
-        /> : <Route
-          path="/survey/:surveyId"
-          element={<SurveyPage />}
-        />}
+        />
 
         <Route
           path="/"
