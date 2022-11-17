@@ -9,7 +9,7 @@
     "start:survey-spa": "nx serve surveychimp-survey-spa",
     "start:api": "nx serve surveychimp-api",
     "test": "nx test",
-    "test:api": "nx run surveychimp-api:test",
+    "test:api": "nx run surveychimp-api2",
     "test:survey-spa": "nx run surveychimp-survey-spa:test"
   },
   "private": true,
