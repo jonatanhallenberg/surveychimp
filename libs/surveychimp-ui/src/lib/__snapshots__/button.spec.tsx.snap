@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button should match snapshot 1`] = `
+<body>
+  <div>
+    <button
+      class="button__StyledButton-sc-156p7kj-0 iPHCQY"
+    >
+      Klicka här!
+    </button>
+  </div>
+</body>
+`;
