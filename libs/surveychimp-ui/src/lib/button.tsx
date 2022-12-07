@@ -8,7 +8,7 @@ const StyledButton = styled.button`
     background-color: 97B09D;
     text-align: center;
     font-family: Armata;
-    font-size: 19;
+    font-size: 20;
     border-radius: 56px;
     border: 0;
 `;

@@ -4,7 +4,7 @@ exports[`Button should match snapshot 1`] = `
 <body>
   <div>
     <button
-      class="button__StyledButton-sc-156p7kj-0 iPHCQY"
+      class="button__StyledButton-sc-156p7kj-0 gbcKGq"
     >
       Klicka här!
     </button>
