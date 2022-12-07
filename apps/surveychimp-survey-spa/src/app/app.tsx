@@ -9,7 +9,6 @@ import { useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import ReactGA from 'react-ga';
 
-
 const TRACKING_ID = "UA-249711198-1"; // OUR_TRACKING_ID
 ReactGA.initialize(TRACKING_ID);
 
